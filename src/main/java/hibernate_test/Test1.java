@@ -8,7 +8,22 @@ import org.hibernate.cfg.Configuration;
 public class Test1 {
     public static void main(String[] args) {
 
+        SessionFactory factory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Address.class)
+                .buildSessionFactory();
+        try {
+            Session session = factory.getCurrentSession();
+            Address address = new Address("Чернівці", "проспект Перемоги",
+                    90, 76);
 
+            session.beginTransaction();
+            session.save(address);
+            session.getTransaction().commit();
+
+        } finally {
+            factory.close();
+        }
 
     }
 }
