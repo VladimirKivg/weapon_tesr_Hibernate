@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
+
 public class Test3 {
     public static void main(String[] args) {
 
@@ -15,9 +17,14 @@ public class Test3 {
         try {
 Session session = factory.getCurrentSession();
 session.beginTransaction();
-Address address = session.get(Address.class,2);
+            List<Address> addressList =session
+                    .createQuery("from Address")
+                    .getResultList();
  session.getTransaction();
- System.out.println(address);
+            for (Address address: addressList) {
+                System.out.println(address);
+            }
+
 
         } finally {
             factory.close();
