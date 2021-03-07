@@ -1,10 +1,11 @@
-package hibernate_test.adres;
+package hibernate_test;
 // дастаем один обект
+import hibernate_test.adres.Address;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class Test2 {
+public class Test3 {
     public static void main(String[] args) {
 
         SessionFactory factory = new Configuration()
