@@ -15,7 +15,7 @@ public class Test2 {
 Session session = factory.getCurrentSession();
 session.beginTransaction();
 Address address = session.get(Address.class,2);
-            System.out.println(address);
+     session.getTransaction();       System.out.println(address);
 
         } finally {
             factory.close();
