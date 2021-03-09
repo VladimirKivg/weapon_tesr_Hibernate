@@ -9,6 +9,23 @@ public class Test4 {
     public static void main(String[] args) {
 //lesson1(); // видаляєм один обект за id
 
+        SessionFactory factory =new Configuration() // відаляем декілька обектів з однаковими данними
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Address.class)
+                .buildSessionFactory();
+        try {
+
+
+        Session session =factory.getCurrentSession();
+session.beginTransaction();
+session.createQuery("delete Address where house_number=12").executeUpdate();
+session.getTransaction().commit();
+
+        } catch (Exception e) {
+            System.out.println("ловим помилку");
+        }finally {
+           factory.close();
+        }
 
     }
 
