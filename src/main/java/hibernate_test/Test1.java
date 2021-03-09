@@ -14,7 +14,7 @@ public class Test1 {
                 .buildSessionFactory();
         try {
             Session session = factory.getCurrentSession();
-            Address address = new Address("Львів", "проспект Кобили",
+            Address address = new Address("Львів", "проспект Комуна",
                     11, 42);
 
             session.beginTransaction();
