@@ -6,11 +6,11 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User {
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "name")
     private String name;
-     @OneToOne
+     @OneToOne(cascade = CascadeType.ALL)
      @JoinColumn(name = "adress_id")
     private Address addressId;
 
