@@ -21,9 +21,11 @@ public class Test11 {
         Address address = new Address("Чернівці","бульва Героїв Крут",22,128);
         User user = new User("Сашко",address);
         session.beginTransaction();
-
+session.save(address);
 
         session.getTransaction().commit();
+
+        factory.close();
 
     }
 }
