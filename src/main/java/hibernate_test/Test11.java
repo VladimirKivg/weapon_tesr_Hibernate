@@ -15,17 +15,21 @@ public class Test11 {
                 .buildSessionFactory();
 
 
+        try {
 
-        Session session = factory.getCurrentSession();
 
-        Address address = new Address("Чернівці","бульва Героїв Крут",22,128);
-        User user = new User("Сашко",address);
-        session.beginTransaction();
-session.save(address);
+            Session session = factory.getCurrentSession();
 
-        session.getTransaction().commit();
+            Address address = new Address("Чернівці", "бульва Героїв Крут", 22, 128);
+            User user = new User("Сашко", address);
+            session.beginTransaction();
+            session.save(user);
 
-        factory.close();
+            session.getTransaction().commit();
+        } finally {
+            factory.close();
+        }
+
 
     }
 }
