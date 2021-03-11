@@ -18,8 +18,8 @@ public class Test11 {
 
         Session session = factory.getCurrentSession();
 
-        Address address = new Address("Чернівці","бульва Героїв Крут",20,41);
-        User user = new User("Вован",address);
+        Address address = new Address("Чернівці","бульва Героїв Крут",22,128);
+        User user = new User("Сашко",address);
         session.beginTransaction();
 
 
