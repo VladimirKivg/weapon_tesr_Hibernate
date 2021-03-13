@@ -21,7 +21,7 @@ public class Test13 {
     }
 
     public static void main(String[] args) {
-     //   getObject(); // дістаємо обект починаючи з останньої ланки
+        //   getObject(); // дістаємо обект починаючи з останньої ланки
         deleteObject();//видаляємо обєкт починаючи з останньої ланки
 
     }
@@ -32,8 +32,8 @@ public class Test13 {
             session = factory.openSession();
             session.beginTransaction();
             Address address = session.get(Address.class, 12);
-           session.delete(address);
-                       session.getTransaction().commit();
+            session.delete(address);
+            session.getTransaction().commit();
         } catch (HibernateException e) {
             System.out.println("ловим помилку");
             e.printStackTrace();
@@ -44,11 +44,11 @@ public class Test13 {
     }
 
     private static void getObject() {
-        Session session=null;
+        Session session = null;
         try {
             session = factory.openSession();
             session.beginTransaction();
-Address address =session.get(Address.class,12);
+            Address address = session.get(Address.class, 12);
             System.out.println(address.getUser());// ось тут ховається весь прікол
             session.getTransaction().commit();
         } catch (HibernateException e) {
@@ -56,7 +56,7 @@ Address address =session.get(Address.class,12);
             e.printStackTrace();
         } finally {
             factory.close();
-session.close();
+            session.close();
         }
     }
 }
