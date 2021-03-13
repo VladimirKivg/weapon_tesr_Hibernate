@@ -10,8 +10,8 @@ public class User {
     private int id;
     @Column(name = "name")
     private String name;
-     @OneToOne(cascade = CascadeType.ALL)
-     @JoinColumn(name = "adress_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "adress_id")
     private Address addressId;
 
     public User() {
