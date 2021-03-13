@@ -19,7 +19,7 @@ public class Test12 {// перштй варіант витягуєм обєкт 
     }
 
     public static void main(String[] args) {
-          getUser();// дістаємо юзера
+        getUser();// дістаємо юзера
 
         //deleteUser();//дістаємо і видаляемо обект
 
@@ -48,7 +48,7 @@ public class Test12 {// перштй варіант витягуєм обєкт 
 
         try {
             session.beginTransaction();
-            User user = session.get(User.class,2);
+            User user = session.get(User.class, 2);
             System.out.println(user + "_ _" + user.getAddressId().getCity());
             session.getTransaction().commit();
         } catch (HibernateException e) {
