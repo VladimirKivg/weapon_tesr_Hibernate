@@ -7,17 +7,17 @@ import javax.persistence.*;
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private int id;
-      @Column(name = "city")
-     private String city;
+    private int id;
+    @Column(name = "city")
+    private String city;
     @Column(name = "strit")
     private String strit;
-     @Column(name = "house_number")
-     private int house_number;
+    @Column(name = "house_number")
+    private int house_number;
     @Column(name = "flet_nember")
-   private int flet_nember;
-    @OneToOne(mappedBy = "addressId",cascade = CascadeType.ALL)// робимо зворотній звязок
-private User user;
+    private int flet_nember;
+    @OneToOne(mappedBy = "addressId", cascade = CascadeType.ALL)// робимо зворотній звязок
+    private User user;
 
     public User getUser() {
         return user;
