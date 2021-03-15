@@ -1,2 +1,4 @@
-package hibernate_test2;public class Test21 {
+package hibernate_test2;
+
+public class Test21 {
 }
