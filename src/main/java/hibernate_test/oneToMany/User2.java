@@ -1,2 +1,4 @@
-package hibernate_test.oneToMany;public class User2 {
+package hibernate_test.oneToMany;
+
+public class User2 {
 }
