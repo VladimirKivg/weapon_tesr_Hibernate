@@ -1,12 +1,13 @@
 package hibernate_test2.oneToMany.uni;
 
-import hibernate_test2.oneToMany.Address2;
+
+import hibernate_test2.oneToMany.uni.Address3;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-public class User2 {
+public class User3 {
     /*id
     * name
     * adress_id*/
@@ -15,24 +16,15 @@ public class User2 {
 private Integer id;
     @Column(name = "name")
 private String name;
-@ManyToOne(cascade = CascadeType.ALL)
-@JoinColumn(name = "adress_id")
-private hibernate_test2.oneToMany.Address2 addressId;
+//зміни видалили ManyToOne і все що з ним звязанно
 
-    public User2() {
+    public User3() {
     }
 
-    public User2(String name) {
+    public User3(String name) {
         this.name = name;
     }
 
-    public hibernate_test2.oneToMany.Address2 getAddressId(hibernate_test2.oneToMany.Address2 address2) {
-        return addressId;
-    }
-
-    public void setAddressId(Address2 addressId) {
-        this.addressId = addressId;
-    }
 
     public Integer getId() {
         return id;
@@ -54,7 +46,7 @@ private hibernate_test2.oneToMany.Address2 addressId;
 
     @Override
     public String toString() {
-        return "User2{" +
+        return "User3{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
