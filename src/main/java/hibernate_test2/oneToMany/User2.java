@@ -57,5 +57,6 @@ private Address2 addressId;
                 ", name='" + name + '\'' +
                 '}';
     }
+
 }
 
