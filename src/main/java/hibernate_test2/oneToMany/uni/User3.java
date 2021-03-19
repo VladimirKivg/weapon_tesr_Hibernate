@@ -1,4 +1,6 @@
-package hibernate_test2.oneToMany;
+package hibernate_test2.oneToMany.uni;
+
+import hibernate_test2.oneToMany.Address2;
 
 import javax.persistence.*;
 
@@ -15,7 +17,7 @@ private Integer id;
 private String name;
 @ManyToOne(cascade = CascadeType.ALL)
 @JoinColumn(name = "adress_id")
-private Address2 addressId;
+private hibernate_test2.oneToMany.Address2 addressId;
 
     public User2() {
     }
@@ -24,7 +26,7 @@ private Address2 addressId;
         this.name = name;
     }
 
-    public Address2 getAddressId(Address2 address2) {
+    public hibernate_test2.oneToMany.Address2 getAddressId(hibernate_test2.oneToMany.Address2 address2) {
         return addressId;
     }
 

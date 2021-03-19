@@ -1,4 +1,6 @@
-package hibernate_test2.oneToMany;
+package hibernate_test2.oneToMany.uni;
+
+import hibernate_test2.oneToMany.User2;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "adress")
-public class Address3 {
+public class Address2 {
     /*id
     * city
     * strit
@@ -28,7 +30,7 @@ public class Address3 {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "addressId")
 private List<User2>user2s;
 
-    public Address3() {
+    public Address2() {
     }
 public void addUser(User2 user2){
         if (user2s==null){
@@ -39,7 +41,7 @@ public void addUser(User2 user2){
 
 
 }
-    public Address3(String city, String street, int houseNumber, int apartmentNumber) {
+    public Address2(String city, String street, int houseNumber, int apartmentNumber) {
         this.city = city;
         this.street = street;
         this.houseNumber = houseNumber;
