@@ -6,10 +6,9 @@ import org.hibernate.cfg.Configuration;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 // витягування
-public class Test22 {
+public class Test22bi {
     public static void main(String[] args) {
         getObject();
     }
