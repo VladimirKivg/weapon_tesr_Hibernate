@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Apartment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
@@ -21,10 +21,12 @@ public class Apartment {
     @Column(name = "house")
     private Integer house;
 
+@ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "agency_and_apartment",
+
     joinColumns = @JoinColumn(name = "id_apartm"),
-    inverseJoinColumns = @JoinColumn(name = "id_agent"))
-ArrayList<Agency>agen;
+            inverseJoinColumns = @JoinColumn(name = "id_agent"))
+private ArrayList<Agency>agen;
 
     public void addAgency(Agency agency){
         if (agen==null){
