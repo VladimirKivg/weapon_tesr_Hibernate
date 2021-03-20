@@ -2,7 +2,6 @@ package hibirnate_test3;
 
 import hibirnate_test3.manyToMany.Agency;
 import hibirnate_test3.manyToMany.Apartment;
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -11,16 +10,12 @@ public class Test31 {
 
 
     public static void main(String[] args) {
-        SessionFactory factory=null;
-        try {
-            factory= new  Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Agency.class)
-                .addAnnotatedClass(Apartment.class)
-                .buildSessionFactory();
-        } catch (HibernateException e) {
-            System.out.println("_________"+e);;
-        }
+        SessionFactory factory = new Configuration()
+                    .configure("hibernate.cfg.xml")
+                    .addAnnotatedClass(Agency.class)
+                    .addAnnotatedClass(Apartment.class)
+                    .buildSessionFactory();
+
         Session session=null;
         try {
             session=factory.getCurrentSession();
