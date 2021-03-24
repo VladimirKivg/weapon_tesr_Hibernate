@@ -2,12 +2,14 @@ package hibirnate_test3.manyToMany;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "agency")
 public class Agency {
+
     @Id
-  //  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
@@ -16,9 +18,10 @@ public class Agency {
 
     @ManyToMany(cascade = CascadeType.ALL)
             @JoinTable(name = "agency_and_apartment",
-                    joinColumns = @JoinColumn(name = "id_agent"),//
-                    inverseJoinColumns = @JoinColumn(name = "id_apartm"))
-private ArrayList<Apartment>apart;
+                    joinColumns = @JoinColumn(name = "id_agent"),
+                    inverseJoinColumns = @JoinColumn(name = "id_apartm")
+            )
+private List<Apartment> apart;
 
     public void addApartment(Apartment apartment){
         if (apart==null){
@@ -50,7 +53,7 @@ private ArrayList<Apartment>apart;
         this.name = name;
     }
 
-    public ArrayList<Apartment> getApart() {
+    public List<Apartment> getApart() {
         return apart;
     }
 
