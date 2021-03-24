@@ -10,38 +10,38 @@ public class Test31 {
 
 
     public static void main(String[] args) {
-SessionFactory factory=null;
-try
-{ factory = new Configuration()
-        .configure("hibernate.cfg.xml")
-        .addAnnotatedClass(Apartment.class)
-        .addAnnotatedClass(Agency.class)
-        .buildSessionFactory();
-} catch (Exception e) {
-    System.out.println("______________"+e);
-
-}
-        Session session=null;
+        SessionFactory factory = null;
         try {
-            session=factory.getCurrentSession();
+            factory = new Configuration()
+                    .configure("hibernate.cfg.xml")
+                    .addAnnotatedClass(Apartment.class)
+                    .addAnnotatedClass(Agency.class)
+                    .buildSessionFactory();
+        } catch (Exception e) {
+            System.out.println("______________" + e);
+
+        }
+        Session session = null;
+        try {
+            session = factory.getCurrentSession();
             session.beginTransaction();
 
-            Agency agency =new Agency("баланс");
-           // Agency agency1=new Agency("альбатрос");
-          //  Agency agency2=new Agency("нерухомість");
-            Apartment apartment= new Apartment("черноуц","бульва",22);
-           Apartment apartment1= new Apartment("Zaz","ssss",12);
-        //    agency.addApartment(apartment);
-        //    Apartment apartment2= new Apartment();
-agency.addApartment(apartment);
+            Agency agency = new Agency("баланс");
+            // Agency agency1=new Agency("альбатрос");
+            //  Agency agency2=new Agency("нерухомість");
+            Apartment apartment = new Apartment("черноуц", "бульва", 22);
+            Apartment apartment1 = new Apartment("Zaz", "ssss", 12);
+            //    agency.addApartment(apartment);
+            //    Apartment apartment2= new Apartment();
+            agency.addApartment(apartment);
             agency.addApartment(apartment1);
-          //  apartment.addAgency(agency1);
-          //  apartment.addAgency(agency2);
-session.save(apartment);
+            //  apartment.addAgency(agency1);
+            //  apartment.addAgency(agency2);
+            session.save(apartment);
             session.getTransaction().commit();
         } catch (Exception e) {
-            System.out.println("________"+e);
-        }finally {
+            System.out.println("________" + e);
+        } finally {
             session.close();
 
         }
