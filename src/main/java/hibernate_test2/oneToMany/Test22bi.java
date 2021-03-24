@@ -15,14 +15,15 @@ public class Test22bi {
 
     private static void getObject() {
         SessionFactory factory = getFactory();
-        Session session =null;
+        Session session = null;
         Address2 address2;
-        ArrayList<User2> usr ;
+        ArrayList<User2> usr;
 
-        try {session=factory.getCurrentSession();
+        try {
+            session = factory.getCurrentSession();
             session.beginTransaction();
-            address2 =session.get(Address2.class,27);
-            usr=new ArrayList<>(address2.getUser2s());
+            address2 = session.get(Address2.class, 27);
+            usr = new ArrayList<>(address2.getUser2s());
             session.getTransaction().commit();
             session.close();
             System.out.println(address2);
@@ -30,10 +31,10 @@ public class Test22bi {
 
 
         } catch (Exception e) {
-            System.out.println("_________"+e);
-        }finally {
+            System.out.println("_________" + e);
+        } finally {
             factory.close();
-session.close();
+            session.close();
         }
     }
 
