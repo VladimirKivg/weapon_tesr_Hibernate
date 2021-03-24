@@ -8,11 +8,11 @@ import java.util.List;
 @Table(name = "adress")
 public class Address3 {
     /*id
-    * city
-    * strit
-    * house_number
-    * flet_nember
-    *  */
+     * city
+     * strit
+     * house_number
+     * flet_nember
+     *  */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -21,26 +21,28 @@ public class Address3 {
     private String city;
     @Column(name = "strit")
 
-     private String street;
+    private String street;
     @Column(name = "house_number")
     private int houseNumber;
     @Column(name = "flet_nember")
     private Integer apartmentNumber;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "adress_id")
-private List<User3>user2s;
+    private List<User3> user2s;
 
     public Address3() {
     }
-public void addUser(User3 user2){
-        if (user2s==null){
-            user2s=new ArrayList<>();
+
+    public void addUser(User3 user2) {
+        if (user2s == null) {
+            user2s = new ArrayList<>();
         }
-    // це видалили
+        // це видалили
         user2s.add(user2);
 
 
-}
+    }
+
     public Address3(String city, String street, int houseNumber, int apartmentNumber) {
         this.city = city;
         this.street = street;
