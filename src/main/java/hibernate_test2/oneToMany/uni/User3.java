@@ -9,13 +9,13 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User3 {
     /*id
-    * name
-    * adress_id*/
+     * name
+     * adress_id*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Integer id;
+    private Integer id;
     @Column(name = "name")
-private String name;
+    private String name;
 //зміни видалили ManyToOne і все що з ним звязанно
 
     public User3() {
@@ -41,7 +41,6 @@ private String name;
     public void setName(String name) {
         this.name = name;
     }
-
 
 
     @Override
