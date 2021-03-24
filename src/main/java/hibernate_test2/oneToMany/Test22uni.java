@@ -16,28 +16,29 @@ public class Test22uni {
 
     private static void getObject() {
         SessionFactory factory = getFactory();
-        Session session =null;
-        hibernate_test2.oneToMany.uni.Address3 address3 ;
-        ArrayList<User3> usr ;
+        Session session = null;
+        hibernate_test2.oneToMany.uni.Address3 address3;
+        ArrayList<User3> usr;
 
 
-        try {session=factory.getCurrentSession();
+        try {
+            session = factory.getCurrentSession();
             session.beginTransaction();
-            address3 =session.get(Address3.class,29);
-           // usr=new ArrayList<>(address3.getUser2s());
+            address3 = session.get(Address3.class, 29);
+            // usr=new ArrayList<>(address3.getUser2s());
             address3.getUser2s().get(0);//можна такий варіан викорістовувати в цьму випадків замість ліста як я робив ранішше
             session.getTransaction().commit();
             session.close();
             System.out.println(address3);
             System.out.println(address3.getUser2s());
-         //   System.out.println(usr);
+            //   System.out.println(usr);
 
 
         } catch (Exception e) {
-            System.out.println("_________"+e);
-        }finally {
+            System.out.println("_________" + e);
+        } finally {
             factory.close();
-session.close();
+            session.close();
         }
     }
 
