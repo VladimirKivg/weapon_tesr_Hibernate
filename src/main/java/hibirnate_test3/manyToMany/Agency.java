@@ -17,15 +17,15 @@ public class Agency {
     private String name;
 
     @ManyToMany(cascade = CascadeType.ALL)
-            @JoinTable(name = "agency_and_apartment",
-                    joinColumns = @JoinColumn(name = "id_agent"),
-                    inverseJoinColumns = @JoinColumn(name = "id_apartm")
-            )
-private List<Apartment> apart;
+    @JoinTable(name = "agency_and_apartment",
+            joinColumns = @JoinColumn(name = "id_agent"),
+            inverseJoinColumns = @JoinColumn(name = "id_apartm")
+    )
+    private List<Apartment> apart;
 
-    public void addApartment(Apartment apartment){
-        if (apart==null){
-            apart=new ArrayList<>();
+    public void addApartment(Apartment apartment) {
+        if (apart == null) {
+            apart = new ArrayList<>();
         }
         apart.add(apartment);
     }
