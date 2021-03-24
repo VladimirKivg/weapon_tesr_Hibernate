@@ -22,15 +22,15 @@ public class Apartment {
     @Column(name = "hous")
     private Integer house;
 
-@ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "agency_and_apartment",
-    joinColumns = @JoinColumn(name = "id_apartm"),
+            joinColumns = @JoinColumn(name = "id_apartm"),
             inverseJoinColumns = @JoinColumn(name = "id_agent"))
-private List<Agency> agen;
+    private List<Agency> agen;
 
-    public void addAgency(Agency agency){
-        if (agen==null){
-            agen=new ArrayList<>();
+    public void addAgency(Agency agency) {
+        if (agen == null) {
+            agen = new ArrayList<>();
         }
         agen.add(agency);
     }
