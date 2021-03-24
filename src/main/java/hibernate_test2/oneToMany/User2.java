@@ -6,16 +6,16 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User2 {
     /*id
-    * name
-    * adress_id*/
+     * name
+     * adress_id*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Integer id;
+    private Integer id;
     @Column(name = "name")
-private String name;
-@ManyToOne(cascade = CascadeType.ALL)
-@JoinColumn(name = "adress_id")
-private Address2 addressId;
+    private String name;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "adress_id")
+    private Address2 addressId;
 
     public User2() {
     }
@@ -47,7 +47,6 @@ private Address2 addressId;
     public void setName(String name) {
         this.name = name;
     }
-
 
 
     @Override
