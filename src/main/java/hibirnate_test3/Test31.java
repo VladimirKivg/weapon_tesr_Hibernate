@@ -10,12 +10,17 @@ public class Test31 {
 
 
     public static void main(String[] args) {
-        SessionFactory factory = new Configuration()
-                    .configure("hibernate.cfg.xml")
-                    .addAnnotatedClass(Agency.class)
-                    .addAnnotatedClass(Apartment.class)
-                    .buildSessionFactory();
+SessionFactory factory=null;
+try
+{ factory = new Configuration()
+        .configure("hibernate.cfg.xml")
+        .addAnnotatedClass(Apartment.class)
+        .addAnnotatedClass(Agency.class)
+        .buildSessionFactory();
+} catch (Exception e) {
+    System.out.println("______________"+e);
 
+}
         Session session=null;
         try {
             session=factory.getCurrentSession();
@@ -25,10 +30,11 @@ public class Test31 {
            // Agency agency1=new Agency("альбатрос");
           //  Agency agency2=new Agency("нерухомість");
             Apartment apartment= new Apartment("черноуц","бульва",22);
-       //     Apartment apartment1= new Apartment();
+           Apartment apartment1= new Apartment("Zaz","ssss",12);
         //    agency.addApartment(apartment);
         //    Apartment apartment2= new Apartment();
-           apartment.addAgency(agency);
+agency.addApartment(apartment);
+            agency.addApartment(apartment1);
           //  apartment.addAgency(agency1);
           //  apartment.addAgency(agency2);
 session.save(apartment);
