@@ -11,7 +11,7 @@ public class Test21uni {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Address3.class)
+                 .addAnnotatedClass(Address3.class)
                 .addAnnotatedClass(User3.class)
                 .buildSessionFactory();
 
