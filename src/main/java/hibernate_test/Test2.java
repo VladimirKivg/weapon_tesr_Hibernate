@@ -19,7 +19,7 @@ public class Test2 {
                 .addAnnotatedClass(Address.class)
                 .buildSessionFactory();
         try {
-            Session session = factory.getCurrentSession();
+              Session session = factory.getCurrentSession();
             session.beginTransaction();
             List<Address> addressList = session
                     .createQuery("from Address where strit= 'бульвар Героїв Крут'" +
