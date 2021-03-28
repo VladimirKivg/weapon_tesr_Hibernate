@@ -9,7 +9,7 @@ public class Test23bi {
         try {
             session = Test22bi.getFactory().getCurrentSession();
             session.beginTransaction();
-            Address2 address2 = session.get(Address2.class, 28);
+             Address2 address2 = session.get(Address2.class, 28);
             session.delete(address2);
             session.getTransaction().commit();
         } catch (Exception e) {
