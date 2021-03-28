@@ -23,7 +23,7 @@ public class Address2 {
     private String street;
     @Column(name = "house_number")
     private int houseNumber;
-    @Column(name = "flet_nember")
+        @Column(name = "flet_nember")
     private int apartmentNumber;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "addressId")
     private List<User2> user2s;
