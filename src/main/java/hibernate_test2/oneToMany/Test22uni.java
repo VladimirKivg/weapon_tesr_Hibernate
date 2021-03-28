@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.ArrayList;
 
 // витягування
-public class Test22uni {
+public class            Test22uni {
     public static void main(String[] args) {
         getObject();
     }
