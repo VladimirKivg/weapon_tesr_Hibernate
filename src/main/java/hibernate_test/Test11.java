@@ -26,7 +26,7 @@ public class Test11 {// записеєм обєкт в базу данних
             User user = new User("Вованчик Хулиганчик", address);
 
             session.beginTransaction();
-            session.save(user);
+    session.save(user);
 
             session.getTransaction().commit();
         } catch (HibernateException e) {
