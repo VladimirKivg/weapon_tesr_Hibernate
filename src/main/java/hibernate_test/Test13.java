@@ -22,7 +22,7 @@ public class Test13 {
 
     public static void main(String[] args) {
         //   getObject(); // дістаємо обект починаючи з останньої ланки
-         deleteObject();//видаляємо обєкт починаючи з останньої ланки
+               deleteObject();//видаляємо обєкт починаючи з останньої ланки
 
     }
 
