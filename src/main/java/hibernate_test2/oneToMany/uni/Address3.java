@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "adress")
-public class Address3 {
+public class    Address3 {
     /*id
      * city
      * strit
