@@ -16,7 +16,7 @@ public class Test3 {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Address.class)
-                .buildSessionFactory();
+        .buildSessionFactory();
         try {
 
 
