@@ -21,7 +21,7 @@ public class Test21bi {
             session.beginTransaction();
             User2 user2 = new User2("vovik");
             User2 user1 = new User2("sashako");
-            User2 user3 = new User2("pasha");
+    User2 user3 = new User2("pasha");
             Address2 address2 = new Address2("chernouc", "hirurga", 20, 41);
             address2.addUser(user2);
             address2.addUser(user1);
