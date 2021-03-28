@@ -44,6 +44,6 @@ public class Test22bi {
                 .addAnnotatedClass(Address2.class)
                 .addAnnotatedClass(User2.class)
                 .buildSessionFactory();
-        return factory;
+        return        factory;
     }
 }
