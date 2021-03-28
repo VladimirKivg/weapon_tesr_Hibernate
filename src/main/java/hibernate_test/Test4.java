@@ -16,7 +16,7 @@ public class Test4 {
         try {
 
 
-            Session session = factory.getCurrentSession();
+               Session session = factory.getCurrentSession();
             session.beginTransaction();
             session.createQuery("delete Address where house_number=12").executeUpdate();
             session.getTransaction().commit();
