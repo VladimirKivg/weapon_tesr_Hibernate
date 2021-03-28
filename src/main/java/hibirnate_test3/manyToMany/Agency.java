@@ -19,7 +19,7 @@ public class Agency {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "agency_and_apartment",
             joinColumns = @JoinColumn(name = "id_agent"),
-            inverseJoinColumns = @JoinColumn(name = "id_apartm")
+inverseJoinColumns = @JoinColumn(name = "id_apartm")
     )
     private List<Apartment> apart;
 
