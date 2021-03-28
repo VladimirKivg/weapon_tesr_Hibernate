@@ -16,7 +16,7 @@ public class Address {
     private int house_number;
     @Column(name = "flet_nember")
     private int flet_nember;
-    @OneToOne(mappedBy = "addressId", cascade = CascadeType.ALL)// робимо зворотній звязок
+    @OneToOne(mappedBy =    "addressId", cascade = CascadeType.ALL)// робимо зворотній звязок
     private User user;
 
     public User getUser() {
