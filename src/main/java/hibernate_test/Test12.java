@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 public class Test12 {// перштй варіант витягуєм обєкт з бази данних, другий витягуєм і видаляєм, але вже тут робим для них спільний сесіонФакторі
     static SessionFactory factory;
 
-    static {
+static {
         factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Address.class)
