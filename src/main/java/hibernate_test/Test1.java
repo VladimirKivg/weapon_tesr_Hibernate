@@ -22,7 +22,7 @@ public class Test1 {
             session.getTransaction().commit();
 
         } finally {
-            factory.close();
+             factory.close();
         }
 
     }
