@@ -23,7 +23,7 @@ public class Apartment {
     private Integer house;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "agency_and_apartment",
+@JoinTable(name = "agency_and_apartment",
             joinColumns = @JoinColumn(name = "id_apartm"),
             inverseJoinColumns = @JoinColumn(name = "id_agent"))
     private List<Agency> agen;
