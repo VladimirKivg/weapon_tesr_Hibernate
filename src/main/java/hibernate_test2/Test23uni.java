@@ -14,7 +14,8 @@ public class Test23uni {
             session.beginTransaction();
             User3 user3 = session.get(User3.class, 32);
 
-            System.out.println(user3);
+
+                       System.out.println(user3);
             session.delete(user3);
 
 
