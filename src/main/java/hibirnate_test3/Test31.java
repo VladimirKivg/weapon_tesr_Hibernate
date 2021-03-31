@@ -41,7 +41,7 @@ public class Test31 {
             session.getTransaction().commit();
         } catch (Exception e) {
             System.out.println("________" + e);
-        } finally {
+                                } finally {
             session.close();
 
         }
