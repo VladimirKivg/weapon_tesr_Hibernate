@@ -11,7 +11,7 @@ public class User {
     @Column(name = "name")
     private String name;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "adress_id")
+    @JoinColumn   (name = "adress_id")
     private Address addressId;
 
     public User() {
