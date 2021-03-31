@@ -11,7 +11,7 @@ public class User3 {
     /*id
      * name
      * adress_id*/
-    @Id
+@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "name")
