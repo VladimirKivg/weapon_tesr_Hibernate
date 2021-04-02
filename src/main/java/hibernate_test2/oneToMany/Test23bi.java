@@ -1,6 +1,7 @@
 package hibernate_test2.oneToMany;
 // дістаємо та видаляємо обект повністю
 
+import hibernate_test2.Test22bi;
 import hibernate_test2.oneToMany.bi.Address2;
 import org.hibernate.Session;
 
