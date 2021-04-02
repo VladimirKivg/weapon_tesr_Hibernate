@@ -1,5 +1,7 @@
 package hibernate_test2.oneToMany;
 
+import hibernate_test2.oneToMany.bi.User2;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
