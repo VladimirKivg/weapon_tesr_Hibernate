@@ -1,4 +1,4 @@
-package hibernate_test2.oneToMany;
+package hibernate_test2.oneToMany.bi;
 
 import hibernate_test2.oneToMany.bi.User2;
 
