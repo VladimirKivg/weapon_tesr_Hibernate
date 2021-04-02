@@ -1,7 +1,5 @@
 package hibernate_test2.oneToMany.bi;
 
-import hibernate_test2.oneToMany.Address2;
-
 import javax.persistence.*;
 
 @Entity
