@@ -2,7 +2,7 @@ package hibernate_test2;
 // додавання обєктів в таблицю
 
 import hibernate_test2.oneToMany.Address2;
-import hibernate_test2.oneToMany.User2;
+import hibernate_test2.oneToMany.bi.User2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
