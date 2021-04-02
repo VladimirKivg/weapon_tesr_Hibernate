@@ -1,5 +1,6 @@
 package hibernate_test2.oneToMany;
 
+import hibernate_test2.oneToMany.bi.User2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
