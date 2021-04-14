@@ -1,4 +1,4 @@
-package hibernate_test2;
+package hibernate_test2.oneToMany;
 // дістаємо та видаляємо обект повністю
 
 import hibernate_test2.oneToMany.Test22uni;
